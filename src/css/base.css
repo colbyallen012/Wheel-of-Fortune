@@ -1,11 +1,10 @@
 body {
-  font-family: 'Press Start 2P';
   background: #5a4271;
-  /* background-image: url("/images/back.gif"); */
   background: linear-gradient(black, transparent), url("/images/back.gif") no-repeat center;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
+  font-family: 'Press Start 2P';
 }
 
 .logo {
@@ -15,29 +14,6 @@ body {
 
 h1 {
   text-align: center;
-}
-
-.boardWheel {
-  transition: 3s;
-  margin-left: 215px;
-}
-
-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.playerNames {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 60%;
-  margin: auto;
-}
-
-.playerOne, .playerTwo, .playerThree{
-  margin: 10px;
 }
 
 section.tables{
@@ -53,6 +29,17 @@ table.guessBoard {
   width: 80%;
 }
 
+.letterBank {
+  background: #004092;
+}
+
+td {
+  background: #673ab7;
+  border: 4px solid #2b3152;
+  height: 20px;
+  width: 20px;
+}
+
 tr, td {
   border: 1px solid black;
   padding: 0px;
@@ -60,22 +47,51 @@ tr, td {
   width: 10px;
 }
 
+th {
+  color: black;
+}
+
 table.letterBank {
+  background: #004092;
   border: 5px solid black;
   height: 230px;
   width: 30%;
-  background: #004092;
 }
+
 section.players{
   display: flex;
   flex-direction: row;
-  width: 90%;
   margin: auto;
+  width: 100%;
 }
+
+.playerNames {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  width: 60%;
+}
+
+.playerOne, .playerTwo, .playerThree{
+  margin: 10px;
+}
+
+.boardWheel {
+  /* margin-left: 215px; */
+  transition: 3s;
+}
+
 section.roundSection {
-  text-align: center;
   margin: 30px;
+  text-align: center;
   width: 50%;
+}
+
+form.playerInputs, .playerButtons{
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
 }
 
 section.playSection{
@@ -90,29 +106,17 @@ section.playSection{
 }
 
 button.spinButton{
-  height: 40px;
-  margin: 10px;
+  background: #ffea00;
   border: 5px solid #ffae00;
   border-radius: 30px;
-  width: 150px;
-  background: #ffea00;
   font-size: 22px;
-}
-
-form.buttons {
-  flex-direction: row;
-}
-
-form.inputs{
-  flex-direction: row;
+  height: 40px;
+  margin: 10px;
+  width: 300px;
 }
 
 .spinButton:hover{
   cursor: pointer;
-}
-
-th {
-  color: black;
 }
 
 .currentPlayer, .clue, .category {
@@ -126,39 +130,27 @@ th {
   cursor: pointer;
 }
 
-.letterBank {
-  background: #004092;
-}
-
-td {
-  border: 4px solid #2b3152;
-  background: #673ab7;
-  width: 20px;
-  height: 20px;
-}
-
 .guessCard {
   background: red;
-  position: absolute;
-  z-index: 1;
-  right: 40%;
-  left: 40%;
   bottom: 40%;
   height: 210px;
+  left: 40%;
+  position: absolute;
+  right: 40%;
+  z-index: 1;
 }
 
-
 input.nameInput{
+  background: black;
+  border: 3px solid #00e000;
+  border-radius: 25px;
+  color: white;
   font-family: 'Press Start 2P';
   font-size: 20px;
   height: 30px;
   margin: 0 10px 0px 10px;
-  width: 120px;
-  border-radius: 25px;
-  border: 3px solid #00e000;
-  color: white;
-  background: black;
   padding-left: 20px;
+  width: 120px;
 }
 
 .instructions, .spunValue {
@@ -166,21 +158,28 @@ input.nameInput{
 }
 
 button.startGame, .tester, .reset, .guessPuzzle {
-  margin: 0px 0px 10px 10px;
-  height: 40px;
-  width: 150px;
   border-radius: 30px;
   font-family: 'Press Start 2P';
+  height: 40px;
+  margin: 0px 10px 0px 10px;
+  width: 148px;
 }
 
 .wheel {
-  text-align: center;
   animation: spin .8s linear;
   display: block;
   fill: #223344;
   height: 200px;
   margin: 0 5px 5px 0;
-  width: 200px;
+  text-align: center;
   transition: 5s;
+  width: 200px;
 }
 
+form.buttons{
+  margin: auto;
+}
+
+@media only screen and (max-width: 370px) {
+
+}
