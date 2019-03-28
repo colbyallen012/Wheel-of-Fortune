@@ -2,21 +2,27 @@ import $ from 'jquery';
 
 let domUpdates = {
 
-    startGame (game) {
-        game.startGame($('.nameInput').eq(0).val(), $('.nameInput').eq(1).val(), $('.nameInput').eq(2).val());
-    },
+  startGame (game) {
+    game.startGame($('.nameInput').eq(0).val(), 
+      $('.nameInput').eq(1).val(),
+      $('.nameInput').eq(2).val());
+  },
 
-    changeNames() {
-        $('.player').eq(0).text($('.nameInput').eq(0).val()).css('color', '#00e000');
-        $('.player').eq(1).text($('.nameInput').eq(1).val()).css('color', '#00e000');
-        $('.player').eq(2).text($('.nameInput').eq(2).val()).css('color', '#00e000');
-    },
+  changeNames() {
+    $('.player').eq(0).text($('.nameInput').eq(0).val()).css(
+      'color', '#00e000');
+    $('.player').eq(1).text($('.nameInput').eq(1).val()).css(
+      'color', '#00e000');
+    $('.player').eq(2).text($('.nameInput').eq(2).val()).css('color', 
+      '#00e000');
+  },
 
-    changeCategory(category) {
-        $('.category').text(category);
-    },
+  changeCategory(category) {
+    $('.category').text(category);
+  },
     
-    changeClue(clue) {
+  
+   changeClue(clue) {
         $('.clue').text(clue);
     },
 
@@ -110,6 +116,5 @@ let domUpdates = {
     continueMsg() {
         $('.instructions').text('Correct! Keep going!')
     }
-}
 
 export default domUpdates;

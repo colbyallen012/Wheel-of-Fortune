@@ -10,6 +10,7 @@ chai.spy.on(domUpdates, 'changeNames', () => true);
 chai.spy.on(domUpdates, 'changeCategory', () => true);
 chai.spy.on(domUpdates, 'changeClue', () => true);
 
+
 const expect = chai.expect;
 
 describe('Wheel', function (){
