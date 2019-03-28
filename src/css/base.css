@@ -16,6 +16,29 @@ h1 {
   text-align: center;
 }
 
+.boardWheel {
+  transition: 3s;
+  margin-left: 250px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.playerNames {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 60%;
+  margin: auto;
+}
+
+.playerOne, .playerTwo, .playerThree{
+  margin: 10px;
+}
+
 section.tables{
   display: flex;
   flex-direction: row;
@@ -131,13 +154,15 @@ button.spinButton{
 }
 
 .guessCard {
-  background: red;
+  background: #292727;
+  position: absolute;
+  z-index: 1;
+  right: 40%;
+  left: 40%;
   bottom: 40%;
   height: 210px;
-  left: 40%;
-  position: absolute;
-  right: 40%;
-  z-index: 1;
+  border: 10px solid #00e000;
+  border-radius: 25px;
 }
 
 input.nameInput{

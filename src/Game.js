@@ -16,12 +16,10 @@ class Game {
     
   fillUseLetters(letter) {
     this.usedLetters.push(letter.target.innerText);
-    // console.log(this.usedLetters);
   }
 
   fillVowels(vowel) {
     this.usedLetters.push(vowel.target.innerText);
-    // console.log(this.usedLetters);
   }
 
   startGame(name1, name2, name3) {
@@ -45,24 +43,21 @@ class Game {
 
   playerTurns() {
     domUpdates.enableButton()
-    if (this.currentPlayer === this.players[0]) {
-      this.currentPlayer = this.players[1];
-    } else if (this.currentPlayer === this.players[1]) {
-      this.currentPlayer = this.players[2];
-    } else if (this.currentPlayer === this.players[2]) {
-      this.currentPlayer = this.players[0];
-    }
-    // console.log(this.currentPlayer)
-    domUpdates.showCurrentPlayer(this.currentPlayer.name)
+      if (this.currentPlayer === this.players[0]){
+        this.currentPlayer = this.players[1];
+      } else if (this.currentPlayer === this.players[1]){
+        this.currentPlayer = this.players[2];
+      } else if (this.currentPlayer === this.players[2]){
+        this.currentPlayer = this.players[0];
+      }
+        domUpdates.showCurrentPlayer(this.currentPlayer.name)
   }
 
-  checkGuess(e) {
-    if (this.round.allCorrectAnswers[this.stage].includes(
-      e.target.innerText)) {
-      // console.log(this.currentPlayer)
+ checkGuess(e) {
+    if(this.round.allCorrectAnswers[this.stage].includes(e.target.innerText)) {
+        domUpdates.continueMsg();
     } else {
-      this.playerTurns();
-      // console.log(this.currentPlayer)
+        this.playerTurns();
     }
   }
     
