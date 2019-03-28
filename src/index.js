@@ -34,25 +34,27 @@ $('.letters').on('click', function(e) {
 });
 
 $('.vowel').on('click', function (e) {
-    if(game.currentPlayer.score > 99) {
-        game.currentPlayer.score -= 100;
-        game.fillVowels(e);
-        $('body').find(e.target).prop('disabled', true)
-        $('body').find(e.target).css("background-color", "#00e000");
-        domUpdates.checkLetterGuess(game.round.allCorrectAnswers[game.stage], game.usedLetters, game.wheel.currentSpinValue, game, game.currentPlayer);
-        game.checkGuess(e);
-    } else {
-        $('.instructions').text('Not enough moneys/cheddar...Choose a letter')
-    }
+  if (game.currentPlayer.score > 99) {
+    game.currentPlayer.score -= 100;
+    game.fillVowels(e);
+    $('body').find(e.target).prop('disabled', true)
+    $('body').find(e.target).css("background-color", "#00e000");
+    domUpdates.checkLetterGuess(game.round.allCorrectAnswers[game.stage], 
+      game.usedLetters, game.wheel.currentSpinValue, game, game.currentPlayer);
+    game.checkGuess(e);
+  } else {
+    $('.instructions').text('Not enough moneys/cheddar...Choose a letter')
+  }
 });
 
 $('.spinButton').on('click', function (e) {
-    e.preventDefault();
-    game.wheel.spinWheel(game.stage);
-    game.currentPlayer.calculateBank(game.wheel.currentSpinValue, game, game.currentPlayer.name)
-    $('.spunValue').text(game.wheel.currentSpinValue)
-    spin += 1000
-    $('.boardWheel').css('transform', `rotate(${spin}deg)`)
+  e.preventDefault();
+  game.wheel.spinWheel(game.stage);
+  game.currentPlayer.calculateBank(game.wheel.currentSpinValue, 
+    game, game.currentPlayer.name)
+  $('.spunValue').text(game.wheel.currentSpinValue)
+  spin += 1000
+  $('.boardWheel').css('transform', `rotate(${spin}deg)`)
 });
 
 $('.reset').on('click', function (e) {
