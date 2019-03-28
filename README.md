@@ -36,8 +36,9 @@ NPM install
 
 Gameplay
 
+![screencapture-localhost-8080-2019-03-28-01_08_59](https://user-images.githubusercontent.com/43159025/55137681-3a7e2300-50f7-11e9-80b8-ba3664395435.png)
 
-
+![screencapture-localhost-8080-2019-03-28-01_12_53](https://user-images.githubusercontent.com/43159025/55137695-42d65e00-50f7-11e9-9845-9256a19962eb.png)
 
 ## How to View Your Code in Action
 
