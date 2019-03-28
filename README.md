@@ -50,8 +50,6 @@ npm start
 
 ## Test Files Organization
 
-## Webpack?
-
 ## Deploying to GitHub Pages
 
 ## DTR
