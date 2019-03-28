@@ -116,5 +116,6 @@ let domUpdates = {
     continueMsg() {
         $('.instructions').text('Correct! Keep going!')
     }
+}
 
 export default domUpdates;
