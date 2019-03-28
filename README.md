@@ -45,3 +45,7 @@ npm start
 ## Webpack?
 
 ## Deploying to GitHub Pages
+
+## DTR
+
+[DTR File](https://gist.github.com/Rosebud303/2f357e9410bb635cdb2e0b55f574e03e)
