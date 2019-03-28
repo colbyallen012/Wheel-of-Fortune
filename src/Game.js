@@ -43,21 +43,21 @@ class Game {
 
   playerTurns() {
     domUpdates.enableButton()
-      if (this.currentPlayer === this.players[0]){
-        this.currentPlayer = this.players[1];
-      } else if (this.currentPlayer === this.players[1]){
-        this.currentPlayer = this.players[2];
-      } else if (this.currentPlayer === this.players[2]){
-        this.currentPlayer = this.players[0];
-      }
-        domUpdates.showCurrentPlayer(this.currentPlayer.name)
+    if (this.currentPlayer === this.players[0]) {
+      this.currentPlayer = this.players[1];
+    } else if (this.currentPlayer === this.players[1]) {
+      this.currentPlayer = this.players[2];
+    } else if (this.currentPlayer === this.players[2]) {
+      this.currentPlayer = this.players[0];
+    }
+    domUpdates.showCurrentPlayer(this.currentPlayer.name)
   }
 
- checkGuess(e) {
-    if(this.round.allCorrectAnswers[this.stage].includes(e.target.innerText)) {
-        domUpdates.continueMsg();
+  checkGuess(e) {
+    if (this.round.allCorrectAnswers[this.stage].includes(e.target.innerText)) {
+      domUpdates.continueMsg();
     } else {
-        this.playerTurns();
+      this.playerTurns();
     }
   }
     
